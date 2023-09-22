@@ -35,3 +35,4 @@ sysinfo.txt
 *.dll filter=lfs diff=lfs merge=lfs -text
 *.dylib filter=lfs diff=lfs merge=lfs -text
 *.so filter=lfs diff=lfs merge=lfs -text
+ArtifactDB filter=lfs diff=lfs merge=lfs -text

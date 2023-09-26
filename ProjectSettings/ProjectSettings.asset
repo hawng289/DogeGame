@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 080931b95e7101d40a8fb3fb2dc34c5a
+  productGUID: addb24cf9e2669c478525fda7376bedf
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -675,14 +675,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: DogeGame3
+  metroPackageName: DogeGame
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: DogeGame3
+  metroApplicationDescription: DogeGame
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0

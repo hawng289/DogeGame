@@ -5,19 +5,25 @@ using UnityEngine;
 public class BombController : MonoBehaviour
 {
     public Vector3 target;
-    private float moveSpeed = 5;
-
+    public float moveSpeed = 5;
+    public float destroyTime = 2;
+    public GameObject explor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, destroyTime);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate((target - transform.position) * moveSpeed * Time.deltaTime);
-        Debug.Log(target.ToString());
-        Debug.Log(transform.position);
+       
+    }
+
+    void OnDestroy()
+    {
+        GameObject exp = Instantiate(explor, transform.position, Quaternion.identity) as GameObject;
+        Destroy(exp, 0.5f);
     }
 }

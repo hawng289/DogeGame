@@ -14,9 +14,11 @@ public class GameController : MonoBehaviour
     public Sprite btnClick;
     public TextMeshProUGUI pointText;
     private float point = 0;
+    private AudioSource endgameAudio;
     // Start is called before the first frame update
     void Start()
     {
+        endgameAudio = gameObject.GetComponent<AudioSource>();
         Time.timeScale = 1;
     }
 
@@ -52,6 +54,7 @@ public class GameController : MonoBehaviour
     public void EndGame()
     {
         Time.timeScale = 0;
+        endgameAudio.Play();
         pnlEndGame.SetActive(true);
     }
 

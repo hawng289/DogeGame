@@ -11,9 +11,10 @@ public class WolfController : MonoBehaviour
     private float maxBombTime = 5;
     private float lastBombTime = 0;
     private float bombTime = 0;
-    public float throughBoomTime = 0.5f;
+    public float throughBoomTime = 1f;
     GameObject sheep;
     Animator anim;
+    GameObject gameControler;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,7 @@ public class WolfController : MonoBehaviour
         sheep = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         anim.SetBool("isBomb", false);
+        gameControler = GameObject.FindGameObjectWithTag("GameController");
     }
 
 
@@ -50,5 +52,6 @@ public class WolfController : MonoBehaviour
         bom.GetComponent<BombController>().target = sheep.transform.position;
         UpdateBombTime();
         anim.SetBool("isBomb", false);
+        gameControler.GetComponent<GameController>().UpdatePoint();
     }
 }
